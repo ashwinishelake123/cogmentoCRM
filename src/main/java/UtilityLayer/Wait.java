@@ -21,5 +21,10 @@ public class Wait extends BaseClass {
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
 		wait.until(ExpectedConditions.visibilityOf(wb)).sendKeys(value);
 	}
+	public static boolean isDisplayed(WebElement wb)
+	{
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+		return wait.until(ExpectedConditions.visibilityOf(wb)).isDisplayed();
+	}
 
 }
